@@ -1,4 +1,5 @@
 import React from "react";
+import "./Footer.css"
 
 
 const Footer = () => {
@@ -6,11 +7,7 @@ const Footer = () => {
 
   return (
 
-    <footer>
-    
-    
-    
-    </footer>
+    <footer>&#169; 2022 #VANLIFE</footer>
 
   )
 

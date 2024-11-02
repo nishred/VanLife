@@ -4,11 +4,22 @@ box-sizing: border-box;
 
 }
 
+html,body
+{
+  height: 100%;
+}
+
+#root
+{
+  min-height: 100%;
+}
+
 body{
 
   margin: 0px;
   padding: 0px;
   font-family: "Inter", sans-serif;
+  background-color: #f2e9e4;
 
 }
 

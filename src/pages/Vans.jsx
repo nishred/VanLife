@@ -81,7 +81,6 @@ const Vans = () => {
 
              setTypeState(nextTypeState)
  
-
          }}  className={`type-btn ${typeState[type]?("checked-btn"):("unchecked-btn")}`} key={type}>{type}</button>)
 
 
@@ -89,16 +88,13 @@ const Vans = () => {
 
       <button className="clear-filters" onClick={() => {
 
-
          setTypeState(initialState)
-
 
       }} >Clear filters</button>
        
       </div>
 
       <div className="vans-container">
-      
       
        {vans.filter((van) => {
          
@@ -117,10 +113,6 @@ const Vans = () => {
 
       
       </div> 
-
-
-
-
 
       </div>
 

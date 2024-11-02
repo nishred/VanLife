@@ -14,17 +14,17 @@ import "../server"
 
 import VanDetail from "./pages/VanDetail";
 
-import Layout from "./Components/Layout";
+import Layout from "./Components/Layout/Layout";
 
 import HostLayout from "./pages/HostLayout";
 import Dashboard from "./pages/Dashboard";
 import Income from "./pages/Income";
 import Reviews from "./pages/Reviews";
+import HostVans from "./pages/HostVans/HostVans";
+import HostVanDetails from "./pages/HostVanDetails/HostVanDetails";
 
 
 const App = () => {
-
-
 
   return (
 
@@ -50,13 +50,13 @@ const App = () => {
       <Route path = "income" element = {<Income />} />
 
       <Route path  = "reviews" element = {<Reviews />} />
+
+      <Route path = "vans" element = {<HostVans />} />
+
+      <Route path = "vans/:id" element = {<HostVanDetails />} />
      
      </Route>
-
-
-     </Route>
-
-     
+     </Route>     
      </Routes>
      
      </BrowserRouter>

@@ -1,0 +1,47 @@
+.host-vans-container
+{
+
+  padding: 32px;
+
+}
+
+
+.van-list-item
+{
+
+    display: flex;
+    gap: 16px;
+    padding: 8px 16px;
+    align-items: center;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.van-image
+{
+    width: 0px;
+    flex-grow: 1;
+    height: 65px;
+    border-radius: 4px;
+}
+
+.van-name-price-wrapper
+{
+   width: 0px;
+   flex-grow: 5;
+}
+
+.vans-wrapper
+{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.van-item-link
+{
+    all: unset;
+    display: block;
+    cursor: pointer;
+
+}

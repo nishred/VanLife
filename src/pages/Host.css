@@ -4,16 +4,20 @@
     gap: 16px;
 }
 
-
-
-.host-nav a {
-
+a 
+{
   text-decoration: none;
-
 }
 
-.host-nav a:active
+.active-link
 {
+   color: #22223b;
    text-decoration: underline;
+ 
+}
+
+.inactive-link
+{
+  color: #4a4e69;
 
 }

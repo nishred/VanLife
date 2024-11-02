@@ -20,7 +20,6 @@ export default function About() {
             </div>
             </div>
 
-            <Link to="product">Product</Link>
         </div>
     );
 }

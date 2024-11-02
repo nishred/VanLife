@@ -1,0 +1,60 @@
+.link-back-host-vans
+{
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    
+}
+
+.van-depth-wrapper
+{
+    padding: 32px;
+}
+
+.depth-wrapper
+{
+  display: flex;
+  gap: 16px;
+  
+}
+
+.depth-wrapper img
+{
+
+  width: 150px;
+
+}
+
+
+.type-span
+{
+  display: inline;
+  padding: 10px 16px;
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-weight: 600;
+
+}
+
+.simple
+{
+    background-color: #f4a261;
+    color: white;
+}
+
+.rugged
+{
+    background-color: green;
+    color: white;
+}
+
+.luxury
+{
+   background-color: black;
+   color: wheat;
+}
+
+.depth-name-price-wrapper h2 span
+{
+    font-weight: 200;
+} 
