@@ -1,0 +1,1 @@
+export const types = ["simple","rugged","luxury"]

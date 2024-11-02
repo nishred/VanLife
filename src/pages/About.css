@@ -1,0 +1,31 @@
+.about-hero-image
+{
+    width: 100%;
+
+}
+
+.about-page-content-wrapper
+{
+    padding: 32px 24px;
+}
+
+.about-page-cta
+{
+  padding: 32px 48px;
+  background-color: #f4a261;
+  border-radius: 4px;
+     
+}
+
+.about-page-cta a{
+
+  display: inline-block;   
+  text-decoration: none;
+  color: white;
+  padding: 16px 24px;
+  background-color: black;
+  font-weight: 500;
+  border-radius: 8px;
+  
+}
+

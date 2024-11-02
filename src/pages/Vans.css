@@ -1,0 +1,72 @@
+.vans-wrapper
+{
+   padding: 32px;
+
+}
+
+
+
+.vans-container
+{
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.type-btn
+{
+
+   padding: 16px 24px;
+   font-weight: 600;
+
+   border-radius: 8px;
+
+   border: none;
+
+   cursor: pointer;
+
+
+}
+
+
+.checked-btn
+{
+
+   background-color: purple;
+   color: wheat;
+
+}
+
+
+
+.unchecked-btn
+{
+    background-color: wheat;
+    color: black; 
+ 
+}
+
+.btn-wrapper
+{
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+
+}
+
+.clear-filters
+{
+
+   padding: 0px;
+   background-color: white;
+
+   border: none;
+
+   color: #023047;
+   text-decoration: underline;
+   font-weight: 600;
+   font-size: 1rem;
+
+   margin-left: auto;
+
+}

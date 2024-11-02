@@ -1,0 +1,76 @@
+.van-wrapper
+{
+
+  width: 0px;
+  flex-basis : 220px;
+
+}
+
+
+
+.name-price-wrapper
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.type-span
+{
+  display: inline;
+  padding: 10px 16px;
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-weight: 600;
+
+}
+
+.simple
+{
+    background-color: #f4a261;
+    color: white;
+}
+
+.rugged
+{
+    background-color: green;
+    color: white;
+}
+
+.luxury
+{
+   background-color: black;
+   color: wheat;
+}
+
+.van-wrapper img
+{
+    width: 100%;
+}
+
+.price-head
+{
+    position: relative;
+    font-size: 2rem;
+}
+
+.day-abs
+{
+    position: absolute;
+    top: 32px;
+    right: 0px;
+    font-size: 1rem;
+}
+
+.van-wrapper .name
+{
+    font-size: 1.5rem;
+}
+
+.van-link
+{
+    all: unset;
+    display: block;
+    cursor: pointer;
+}
