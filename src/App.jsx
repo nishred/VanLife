@@ -16,7 +16,7 @@ import VanDetail from "./pages/VanDetail";
 
 import Layout from "./Components/Layout";
 
-import Host from "./pages/Host";
+import HostLayout from "./pages/HostLayout";
 import Dashboard from "./pages/Dashboard";
 import Income from "./pages/Income";
 import Reviews from "./pages/Reviews";
@@ -33,23 +33,23 @@ const App = () => {
                 
      <Routes>
      
-     <Route element = {<Layout />}>
+     <Route element = {<Layout />}> 
 
-     <Route path="/" element = {<Home />} />
+     <Route index element = {<Home />} />
      
-     <Route path="/about" element = {<About />} />
+     <Route path="about" element = {<About />} />
      
-     <Route path="/vans" element = {<Vans />} />
+     <Route path="vans" element = {<Vans />} />
 
-     <Route path = "/vans/:id" element = {<VanDetail />} />
+     <Route path = "vans/:id" element = {<VanDetail />} />
 
-     <Route path= "/host" element = {<Host />}>
+     <Route path= "host" element = {<HostLayout />}>
      
-      <Route path = "" element = {<Dashboard />} />
+      <Route index element = {<Dashboard />} />
 
-      <Route path = "/host/income" element = {<Income />} />
+      <Route path = "income" element = {<Income />} />
 
-      <Route path  = "/host/reviews" element = {<Reviews />} />
+      <Route path  = "reviews" element = {<Reviews />} />
      
      </Route>
 

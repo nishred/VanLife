@@ -4,3 +4,16 @@
     gap: 16px;
 }
 
+
+
+.host-nav a {
+
+  text-decoration: none;
+
+}
+
+.host-nav a:active
+{
+   text-decoration: underline;
+
+}

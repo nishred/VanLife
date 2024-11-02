@@ -4,7 +4,7 @@ import { Link, Outlet } from "react-router-dom";
 import "./Host.css"
 
 
-const Host = () => {
+const HostLayout = () => {
 
 
    return (
@@ -20,7 +20,6 @@ const Host = () => {
      <Link>Vans</Link>
      <Link to="/host/reviews">Reviews</Link>
 
-     
      </nav>
 
      <Outlet />
@@ -32,4 +31,4 @@ const Host = () => {
 
 }
 
-export default Host
+export default HostLayout
