@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import "./HostVanDetails.css"
-import { NavLink, useParams } from "react-router-dom";
+import "./HostVan.css"
+import { NavLink, useParams,Outlet } from "react-router-dom";
 
 import { IoMdArrowRoundBack } from "react-icons/io";
 
 
-const HostVanDetails = () => {
+const HostVan = () => {
 
    
    const {id} = useParams()
@@ -43,11 +43,8 @@ const HostVanDetails = () => {
 
         <NavLink className="link-back-host-vans" to="/host/vans">{<IoMdArrowRoundBack />}  Back to all vans</NavLink>
 
-        <div className="van-depth-wrapper">
-        
-           
+        <div className="van-depth-wrapper">   
         <div className="depth-wrapper">
-        
         <img src={hostVanDetail.imageUrl} />
         
         <div className="depth-name-price-wrapper">
@@ -59,16 +56,52 @@ const HostVanDetails = () => {
         <h2>{hostVanDetail.price}<span>/day</span></h2>
 
         </div>
-
         </div>
+
+
+        <nav>
         
+        <ul className="host-van-nav">
+        
+         <li>
+         <NavLink end className={({isActive}) => {
+
+            return (isActive)?("active-link"):("inactive-link")
+ 
+
+         }}  to=".">Details</NavLink> 
+         </li>
+         
+         <li>
+         <NavLink className={({isActive}) => {
+
+               return (isActive)?("active-link"):("inactive-link")
+ 
+
+         }}  to="pricing">Pricing</NavLink>
+         </li>
+
+         <li>
+         <NavLink className={({isActive}) => {
+
+             return (isActive)?("active-link"):("inactive-link")
+           
+         }}  to="photos">Photos</NavLink>
+         </li>
+        
+        </ul>
+      
+        </nav>
+
+
+        <Outlet />
+
         </div>
 
         </>
-
    )
 
 
 }
 
-export default HostVanDetails
+export default HostVan

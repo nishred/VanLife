@@ -18,14 +18,14 @@ const HostLayout = () => {
 
           return (isActive)?("active-link"):("inactive-link")
 
-     }}  to="/host">Dashboard</NavLink>
+     }}  to=".">Dashboard</NavLink>
 
      <NavLink className={({isActive}) => {
 
         return (isActive)?("active-link"):("inactive-link")
 
-     }} to="/host/income">Income</NavLink>
-     <NavLink to="/host/vans" className={({isActive}) => {
+     }} to="income">Income</NavLink>
+     <NavLink to="vans" className={({isActive}) => {
 
          return (isActive)?("active-link"):("inactive-link")
 
@@ -34,7 +34,7 @@ const HostLayout = () => {
 
          return (isActive)?("active-link"):("inactive-link")
 
-     }}  to="/host/reviews">Reviews</NavLink>
+     }}  to="reviews">Reviews</NavLink>
 
      </nav>
 

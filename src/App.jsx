@@ -21,7 +21,13 @@ import Dashboard from "./pages/Dashboard";
 import Income from "./pages/Income";
 import Reviews from "./pages/Reviews";
 import HostVans from "./pages/HostVans/HostVans";
-import HostVanDetails from "./pages/HostVanDetails/HostVanDetails";
+import HostVan from "./pages/HostVanDetails/HostVan";
+
+import HostVanDetails from "./pages/HostVanDetails";
+
+import HostVanPhotos from "./pages/HostVanPhotos";
+
+import HostVanPricing from "./pages/HostVanPricing";
 
 
 const App = () => {
@@ -53,8 +59,11 @@ const App = () => {
 
       <Route path = "vans" element = {<HostVans />} />
 
-      <Route path = "vans/:id" element = {<HostVanDetails />} />
-     
+      <Route path = "vans/:id" element = {<HostVan />}>
+       <Route index element = {<HostVanDetails />} />
+       <Route path = "pricing" element = {<HostVanPricing />} />
+       <Route path = "photos" element = {<HostVanPhotos />} />
+       </Route>
      </Route>
      </Route>     
      </Routes>

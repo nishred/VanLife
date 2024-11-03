@@ -58,3 +58,33 @@
 {
     font-weight: 200;
 } 
+
+
+.host-van-nav li
+{
+  list-style-type: none;
+
+}
+
+.host-van-nav{
+
+  display: flex;
+  padding: 0px;
+  gap : 16px
+
+}
+
+
+.active-link
+{
+   color: #22223b;
+   text-decoration: underline;
+ 
+}
+
+.inactive-link
+{
+  color: #4a4e69;
+
+}
+
