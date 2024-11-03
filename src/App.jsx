@@ -57,10 +57,9 @@ const App = () => {
 
       <Route path  = "reviews" element = {<Reviews />} />
 
-      <Route path = "vans" element = {<Outlet />}>
+      <Route path = "vans" element = {<HostVans />} />
 
-      <Route index element = {<HostVans />} />
-      <Route path = ":id" element = {<HostVan />}>
+      <Route path = "vans/:id" element = {<HostVan />}>
 
       <Route index element = {<HostVanDetails />} />
       <Route path = "pricing" element = {<HostVanPricing />} />
@@ -70,8 +69,7 @@ const App = () => {
       </Route>
 
        </Route>
-
-     </Route>     
+    
      </Routes>
      
      </BrowserRouter>
