@@ -41,7 +41,7 @@ const HostVan = () => {
 
         <>
 
-        <NavLink className="link-back-host-vans" to="/host/vans">{<IoMdArrowRoundBack />}  Back to all vans</NavLink>
+        <NavLink className="link-back-host-vans" to="..">{<IoMdArrowRoundBack />}  Back to all vans</NavLink>
 
         <div className="van-depth-wrapper">   
         <div className="depth-wrapper">

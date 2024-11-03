@@ -1,6 +1,6 @@
 import React from "react";
 
-import {BrowserRouter,Routes,Route} from "react-router-dom"
+import {BrowserRouter,Routes,Route,Outlet} from "react-router-dom"
 
 import Header from "./Components/Header/Header";
 
@@ -57,14 +57,20 @@ const App = () => {
 
       <Route path  = "reviews" element = {<Reviews />} />
 
-      <Route path = "vans" element = {<HostVans />} />
+      <Route path = "vans" element = {<Outlet />}>
 
-      <Route path = "vans/:id" element = {<HostVan />}>
-       <Route index element = {<HostVanDetails />} />
-       <Route path = "pricing" element = {<HostVanPricing />} />
-       <Route path = "photos" element = {<HostVanPhotos />} />
+      <Route index element = {<HostVans />} />
+      <Route path = ":id" element = {<HostVan />}>
+
+      <Route index element = {<HostVanDetails />} />
+      <Route path = "pricing" element = {<HostVanPricing />} />
+      <Route path = "photos" element = {<HostVanPhotos />} />
+      </Route>
+
+      </Route>
+
        </Route>
-     </Route>
+
      </Route>     
      </Routes>
      

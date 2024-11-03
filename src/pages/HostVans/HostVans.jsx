@@ -47,7 +47,7 @@ const HostVans = () => {
 
        return (
   
-        <NavLink className="van-item-link"  key = {van.id} to = {`/host/vans/${van.id}`}> 
+        <NavLink className="van-item-link"  key = {van.id} to = {`${van.id}`}> 
         
         <div className="van-list-item"> 
         
