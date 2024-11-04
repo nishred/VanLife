@@ -2,16 +2,20 @@ import React from "react";
 
 import "./Van.css"
 
-import { Link } from "react-router-dom";
+import { Link,useSearchParams } from "react-router-dom";
 
 
 const Van  = ({id,imageUrl,name,price,type}) => {
+
+   const [searchParams,setSearchParams] = useSearchParams()
+
+
 
    return (
 
     <div className="van-wrapper">
 
-    <Link className="van-link" to={`/vans/${id}`}>
+    <Link className="van-link" state={{search : searchParams.toString()}}  to={`${id}`}>
      
      <img src={imageUrl} />
 

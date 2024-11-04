@@ -24,17 +24,13 @@ import HostVans from "./pages/HostVans/HostVans";
 import HostVan from "./pages/HostVanDetails/HostVan";
 
 import HostVanDetails from "./pages/HostVanDetails";
-
 import HostVanPhotos from "./pages/HostVanPhotos";
-
 import HostVanPricing from "./pages/HostVanPricing";
-
 
 const App = () => {
 
   return (
 
-   
      <BrowserRouter>
                 
      <Routes>

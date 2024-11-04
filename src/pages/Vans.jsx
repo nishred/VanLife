@@ -1,42 +1,21 @@
 import React, { useEffect } from "react";
-
+import {useSearchParams} from "react-router-dom"
 import Van from "../Components/Van/Van";
-
 import "./Vans.css"
 import { types } from "../utils";
 
-const initialState = {}
-
-types.forEach((type) => {
-
-
-  initialState[type] = false
-
-})
-
-
 const Vans = () => {
-
 
   const [vans,setVans] = React.useState(null)
 
-  const [typeState,setTypeState] = React.useState(initialState)
+  const [searchParams,setSearchParams] = useSearchParams()
 
-
-
-  let showAll = true
-
-  Object.keys(typeState).forEach((type) => {
-
-      if(typeState[type])
-        showAll = false
-
-  })
-
+  const typeFilter = searchParams.get("type")
 
   // loading | success | error
   const [status,setStatus] = React.useState("loading")
 
+  
 
   useEffect(() => {
 
@@ -63,6 +42,44 @@ const Vans = () => {
     return <p>Loading...</p>
 
 
+   const filteredVans = (typeFilter)?(
+
+     vans.filter((van) => {
+
+         return van.type === typeFilter
+
+     })
+
+   ):([...vans])
+
+
+  function handleSetSearchParams(key,value)
+  {
+
+       setSearchParams((prevParams) => {
+
+           if(value)
+           {
+               prevParams.set(key,value)
+            
+
+           }
+           else{
+
+              prevParams.delete(key)
+           }
+
+
+           return prevParams
+  
+
+       })
+
+
+  } 
+
+
+
   return (
 
 
@@ -71,51 +88,35 @@ const Vans = () => {
       <h1>Explore our Van options</h1> 
 
       <div className="btn-wrapper">
-      {types.map((type,idx) => {
- 
-         return (<button onClick={() => {
-
-             const nextTypeState = {...typeState}
-
-             nextTypeState[type] = !nextTypeState[type]
-
-             setTypeState(nextTypeState)
- 
-         }}  className={`type-btn ${typeState[type]?("checked-btn"):("unchecked-btn")}`} key={type}>{type}</button>)
-
-
-      })}
-
-      <button className="clear-filters" onClick={() => {
-
-         setTypeState(initialState)
-
-      }} >Clear filters</button>
-       
-      </div>
-
-      <div className="vans-container">
       
-       {vans.filter((van) => {
-         
-           if(showAll)
-            return true
+       {types.map((type,idx) => {
 
-           return typeState[van.type]
+             return (<button key={idx} className={(typeFilter === type)?("type-btn checked-btn"):("type-btn unchecked-btn")} onClick={() => {
 
-       }).map((van) => {
-
-          return (<Van key={van.id} id = {van.id} imageUrl={van.imageUrl} name={van.name} price={van.price} type={van.type} />
-          )
-
+                 handleSetSearchParams("type",type)
+               
+             }}>{type}</button>)
 
        })}
 
-      
-      </div> 
+       {(typeFilter) && (<button className="type-btn clear-btn unchecked-btn" onClick={() => {
 
+           handleSetSearchParams("type",null)
+
+       }}>Clear</button>)}
+      
       </div>
 
+
+      <div className="vans-container">
+      
+       {filteredVans.map((van) => {
+
+          return (<Van key={van.id} id = {van.id} imageUrl={van.imageUrl} name={van.name} price={van.price} type={van.type} />
+          )
+       })}      
+      </div> 
+      </div>
   )
 
 

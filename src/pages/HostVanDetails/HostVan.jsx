@@ -23,6 +23,8 @@ const HostVan = () => {
 
       setHostVanDetail(json.vans[0])
 
+      console.log(json.vans[0])
+
      }
 
      fetchHostVanDetail()
@@ -93,7 +95,7 @@ const HostVan = () => {
         </nav>
 
 
-        <Outlet />
+        <Outlet context = {hostVanDetail}/>
 
         </div>
 
