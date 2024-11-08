@@ -1,0 +1,18 @@
+.page-not-found
+{
+    padding: 32px;
+}
+
+
+.back-home-btn
+{
+    all: unset;
+    display: block;
+    width: 100%;
+    padding : 16px 0px;
+    background-color: blue;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}

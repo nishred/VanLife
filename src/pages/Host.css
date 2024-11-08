@@ -21,3 +21,12 @@ a
   color: #4a4e69;
 
 }
+
+.host-van-container-wrapper
+{
+
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+}

@@ -3,13 +3,11 @@ import { NavLink, Outlet } from "react-router-dom";
 
 import "./Host.css"
 
-
-
 const HostLayout = () => {
 
-
    return (
-    <>
+
+    <div className="host-van-container-wrapper">
      <h1>This is a host page</h1>
 
      <nav className="host-nav">
@@ -40,10 +38,9 @@ const HostLayout = () => {
 
      <Outlet />
 
-     </>
+     </div>
 
    )
-
 
 }
 

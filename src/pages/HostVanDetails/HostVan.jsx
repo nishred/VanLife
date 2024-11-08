@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./HostVan.css"
 import { NavLink, useParams,Outlet } from "react-router-dom";
-
 import { IoMdArrowRoundBack } from "react-icons/io";
 
 
 const HostVan = () => {
 
-   
    const {id} = useParams()
 
    const [hostVanDetail,setHostVanDetail] = useState(null)
@@ -28,16 +26,12 @@ const HostVan = () => {
      }
 
      fetchHostVanDetail()
-  
 
    },[])
 
 
    if(hostVanDetail === null)
     return null
-
-   console.log(hostVanDetail)
-
 
    return (
 
@@ -93,7 +87,6 @@ const HostVan = () => {
         </ul>
       
         </nav>
-
 
         <Outlet context = {hostVanDetail}/>
 

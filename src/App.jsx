@@ -26,26 +26,33 @@ import HostVan from "./pages/HostVanDetails/HostVan";
 import HostVanDetails from "./pages/HostVanDetails";
 import HostVanPhotos from "./pages/HostVanPhotos";
 import HostVanPricing from "./pages/HostVanPricing";
+import PageNotFound from "./pages/PageNotFound";
+import Login from "./pages/Login/Login";
+import { AuthProvider } from "./Context/AuthProvider";
+import ProtectedRoute from "./Components/ProtectedRoute";
 
 const App = () => {
 
   return (
 
+     <AuthProvider>
      <BrowserRouter>
                 
      <Routes>
      
-     <Route element = {<Layout />}> 
+     <Route path = "/" element = {<Layout />}> 
 
      <Route index element = {<Home />} />
      
      <Route path="about" element = {<About />} />
+
+     <Route path="login" element = {<Login />} />
      
      <Route path="vans" element = {<Vans />} />
 
      <Route path = "vans/:id" element = {<VanDetail />} />
 
-     <Route path= "host" element = {<HostLayout />}>
+     <Route path= "host" element = {<ProtectedRoute><HostLayout /></ProtectedRoute>}>
      
       <Route index element = {<Dashboard />} />
 
@@ -64,16 +71,17 @@ const App = () => {
 
       </Route>
 
+      <Route path="*" element ={<PageNotFound />} />
+
        </Route>
     
      </Routes>
      
      </BrowserRouter>
+     </AuthProvider>
 
 
   )
-
-
 
 }
 

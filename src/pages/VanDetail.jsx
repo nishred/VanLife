@@ -5,14 +5,11 @@ import { Link,useLocation } from "react-router-dom"
 
 import { IoMdArrowRoundBack } from "react-icons/io";
 
-
 export default function VanDetail() {
     const params = useParams()
     const [van, setVan] = React.useState(null)
 
-
     const location = useLocation()
-
 
     React.useEffect(() => {
         fetch(`/api/vans/${params.id}`)
@@ -20,13 +17,15 @@ export default function VanDetail() {
             .then(data => setVan(data.vans))
     }, [params.id])
 
+
+   const back = (location.state?.type)?(`${location.state.type}`):("all")
+
     return (
    
-       
         <div className="van-detail-container">
             {van ? (
                 <div className="van-detail">
-                   <Link className="back-vans-link" to = {(location.state)?(`..?${location.state.search}`):("..")} relative="path" >{<IoMdArrowRoundBack />} Back to all vans</Link>
+                   <Link className="back-vans-link" to = {(location.state)?(`..?${location.state.search}`):("..")} relative="path" >{<IoMdArrowRoundBack />}{`Back to ${back} vans`}</Link>
                     <img src={van.imageUrl} />
                     <span className={`type-span ${van.type}`}>{van.type}</span>
                     <h2>{van.name}</h2>
@@ -37,6 +36,5 @@ export default function VanDetail() {
             ) : <h2>Loading...</h2>}
         </div>
 
-        
     )
 }

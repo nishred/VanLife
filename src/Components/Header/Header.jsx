@@ -2,6 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.css"
 
+import { FaUserCircle } from "react-icons/fa";
+
 const Header = () => {
 
    return (
@@ -29,6 +31,8 @@ const Header = () => {
          return (isActive)?("active-link"):("inactive-link")
 
       }} to="/vans">Vans</NavLink>
+
+      <NavLink to="/login"><FaUserCircle /></NavLink>
     </nav>
     </header>
    )
