@@ -30,6 +30,7 @@ import PageNotFound from "./pages/PageNotFound";
 import Login from "./pages/Login/Login";
 import { AuthProvider } from "./Context/AuthProvider";
 import ProtectedRoute from "./Components/ProtectedRoute";
+import AuthRequired from "./pages/AuthRequired";
 
 const App = () => {
 
@@ -52,8 +53,10 @@ const App = () => {
 
      <Route path = "vans/:id" element = {<VanDetail />} />
 
-     <Route path= "host" element = {<ProtectedRoute><HostLayout /></ProtectedRoute>}>
-     
+     <Route element = {<AuthRequired />}>
+
+     <Route path= "host" element = {<HostLayout />} >
+
       <Route index element = {<Dashboard />} />
 
       <Route path = "income" element = {<Income />} />
@@ -67,6 +70,8 @@ const App = () => {
       <Route index element = {<HostVanDetails />} />
       <Route path = "pricing" element = {<HostVanPricing />} />
       <Route path = "photos" element = {<HostVanPhotos />} />
+      </Route>
+
       </Route>
 
       </Route>
